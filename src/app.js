@@ -11,10 +11,18 @@ let noun = ['jogger', 'racoon'];
 
 window.onload = function() {
   //write your code here
-  let randomPronoun = Math.floor(Math.random()*pronoun.length);
-  let randomAdj = Math.floor(Math.random()*adj.length);
-  let randomNoun = Math.floor(Math.random()*noun.length);
-  let result = pronoun[randomPronoun] + adj[randomAdj] + noun[randomNoun] + ".com";
-  alert(result);
-  console.log(result);
+  for (let i = 0; i < pronoun.length; i++) {
+    let currentPronoun = pronoun[i];
+    for (let j = 0; j < adj.length; j++) {
+      let currentAdj = adj[j];
+
+      for (let x = 0; x < noun.length; x++) {
+        let currentNoun = noun[x];
+        let result = currentPronoun + currentAdj + currentNoun + ".com";
+        console.log(result);
+      }
+      
+    }
+    
+  }
 };
